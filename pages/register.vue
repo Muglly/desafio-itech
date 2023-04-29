@@ -24,6 +24,8 @@
       >
         Cadastrar
       </button>
+
+      <a class="text-orange-500 hover:text-orange-700" href="/">Login</a>
     </form>
   </main>
 </template>
