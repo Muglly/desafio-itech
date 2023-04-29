@@ -49,12 +49,10 @@ export default {
         .auth()
         .createUserWithEmailAndPassword(this.email, this.password)
         .then((user) => {
-          console.log(user);
           this.$router.push("/dashboard");
         })
         .catch((error) => {
           this.errors = error;
-          console.log(error);
         });
     },
   },

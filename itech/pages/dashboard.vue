@@ -31,9 +31,11 @@ export default {
 
   mounted() {
     firebase.auth().onAuthStateChanged((user) => {
-      console.log(user);
-
       this.user = user;
+
+      if (!this.user) {
+        this.$router.push("/");
+      }
     });
   },
 
@@ -43,7 +45,6 @@ export default {
         .auth()
         .signOut()
         .then((result) => {
-          console.log(result);
           this.user = "";
           this.$router.push("/");
         });

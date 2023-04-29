@@ -51,12 +51,10 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then((user) => {
-          console.log(user);
           this.$router.push("/dashboard");
         })
         .catch((error) => {
           this.errors = error;
-          console.log(error);
         });
     },
   },
